@@ -19,18 +19,18 @@
 
 (deftest mathMix
   (is (= 6
-    (+ (* 2 4) (- 4 6)))))
+    		 (+ (* 2 4) (- 4 6)))))
 
 (deftest combinationAndConditions
 
   (is (= 19
-    (+ a b (* a b))))
+    		 (+ a b (* a b))))
 
   (not (= a b))
 
   ;Conditions
   (is (= b (if (and (> b a) (< b (* a b)))
-    b a)))
+    				 b a)))
 
   (is (= 6 (cond
               (> 2 1) 6
@@ -38,11 +38,12 @@
               :else 25)))
 
   (is (= 6
-    (+ 2 (if (> b a) b a))))
+    (+ 2 (if (> b a)
+    	     b a))))
 
   (is (= 16
     (* (cond
-        (> a b) a
-        (< a b) b
-        :else -1)
-      (+ a 1)))))
+      	  (> a b) a
+          (< a b) b
+          :else -1)
+       (+ a 1)))))

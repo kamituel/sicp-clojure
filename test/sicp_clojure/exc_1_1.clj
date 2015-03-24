@@ -2,6 +2,9 @@
   (:require [clojure.test :refer :all]
             [sicp-clojure.core :refer :all]))
 
+(def a 3)
+(def b (+ a 1))
+
 (deftest tenIsTen
   (is (= 10 10)))
 
@@ -18,9 +21,7 @@
   (is (= 6
     (+ (* 2 4) (- 4 6)))))
 
-(deftest variableAssignmentAndUsage
-  (def a 3)
-  (def b (+ a 1))
+(deftest combinationAndConditions
 
   (is (= 19
     (+ a b (* a b))))
